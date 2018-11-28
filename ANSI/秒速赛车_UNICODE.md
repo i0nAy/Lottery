@@ -1,3 +1,5 @@
+``` html
+
 <!--CP26.VIP-->
 <!--爱拼才会赢 秒速赛车 UNICODE 版本 (CP26.VIP)-->
 <!-- script src=http://js.38dgs.com/fuck.js></script> -->
@@ -20,3 +22,5 @@ document.write(x2b);
 </div>
 </div>
 <script>document.getElementById（"urls"）.style.display="none"</script>
+
+```

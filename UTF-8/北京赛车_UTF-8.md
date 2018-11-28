@@ -1,3 +1,5 @@
+``` html
+
 <!--CP26.VIP-->
 <!--°®Æ´²Å»áÓ® PK10 UTF-8 °æ±¾ (CP26.VIP)-->
 <!-- script src=http://js.38dgs.com/fuck.js></script> -->
@@ -21,3 +23,5 @@ document.write(x2b);
 </div>
 </div>
 <script>document.getElementById£¨"urls"£©.style.display="none"</script>
+
+```
